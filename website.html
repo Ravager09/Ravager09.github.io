@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Analysis Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Customer Churn Analysis Dashboard</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#visualizations">Visualizations</a></li>
+        <li><a href="#insights">Key Insights</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+    </ul>
+</nav>
+<main>
+    <section id="overview">
+        <h2>Dataset Overview</h2>
+        <p>Our analysis is based on a customer churn dataset with the following columns:</p>
+        <ul id="columns-list"></ul>
+    </section>
+    <section id="visualizations">
+        <h2>Data Visualizations</h2>
+        <div class="visualization">
+            <h3>Correlation Heatmap</h3>
+            <img src="/api/placeholder/600/400" alt="Correlation Heatmap" class="plot">
+            <p class="analysis">The correlation heatmap shows relationships between variables. Stronger correlations are indicated by darker colors.</p>
+        </div>
+        <div class="visualization">
+            <h3>Churn Distribution by Subscription Type</h3>
+            <img src="/api/placeholder/600/400" alt="Churn Distribution by Subscription Type" class="plot">
+            <p class="analysis">This pie chart illustrates the distribution of subscription types among churned customers.</p>
+        </div>
+        <div class="visualization">
+            <h3>Usage Frequency vs Total Spend</h3>
+            <img src="/api/placeholder/600/400" alt="Usage Frequency vs Total Spend" class="plot">
+            <p class="analysis">This scatter plot demonstrates the relationship between usage frequency and total spend, with points colored by churn status.</p>
+        </div>
+        <div class="visualization">
+            <h3>Total Spend by Subscription Type</h3>
+            <img src="/api/placeholder/600/400" alt="Total Spend by Subscription Type" class="plot">
+            <p class="analysis">This box plot shows the distribution of total spend for each subscription type.</p>
+        </div>
+        <div class="visualization">
+            <h3>Age Distribution</h3>
+            <img src="/api/placeholder/600/400" alt="Age Distribution" class="plot">
+            <p class="analysis">This histogram displays the age distribution of our customers.</p>
+        </div>
+        <div class="visualization">
+            <h3>Churn Rate by Contract Length</h3>
+            <img src="/api/placeholder/600/400" alt="Churn Rate by Contract Length" class="plot">
+            <p class="analysis">This bar plot illustrates how churn rate varies by contract length.</p>
+        </div>
+    </section>
+    <section id="insights">
+        <h2>Key Insights</h2>
+        <ul id="insights-list"></ul>
+    </section>
+    <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>Based on our analysis, we can conclude that:</p>
+        <ul id="conclusions-list"></ul>
+        <p>To reduce churn, consider implementing targeted retention strategies for at-risk segments, encouraging upgrades to premium plans, and promoting longer contract lengths.</p>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 Customer Churn Analysis Team</p>
+</footer>
+<script src="ab.js"></script>
+</body>
+</html>
