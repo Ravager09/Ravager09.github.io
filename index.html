@@ -12,19 +12,358 @@
 </header>
 <nav>
     <ul>
-        <li><a href="#overview">Overview</a></li>
+        <li><a href="#demographic">Demographic Factors</a></li>
+        <li><a href="#engagement">Engagement Metrics</a></li>
+        <li><a href="#financial">Financial Indicators</a></li>
+        <li><a href="#service">Service Characteristics</a></li>
+        <li><a href="#interaction">Customer Interaction</a></li>
+    </ul>
+</nav>
+<nav>
+    <ul>
+        <li><a href="#correlation">Correlation Analysis</a></li>
+        <li><a href="#distribution">Distribution Analysis</a></li>
+        <li><a href="#relationship">Relationship Analysis</a></li>
+        <li><a href="#categorical">Categorical Analysis</a></li>
+        <li><a href="#statistical">Statistical Techniques</a></li>
+    </ul>
+</nav>
+<nav>
+    <ul>
+        <li><a href="#visualization">Data Visualization Techniques</a></li>
+        <li><a href="#analytical">Analytical Framework</a></li>
+        <li><a href="#outcome">Outcome Metrics</a></li>
+        <li><a href="#recommendations">Strategic Recommendations</a></li>
+        <li><a href="#implementation">Implementation Priorities</a></li>
         <li><a href="#visualizations">Visualizations</a></li>
-        <li><a href="#insights">Key Insights</a></li>
         <li><a href="#conclusion">Conclusion</a></li>
         <li><a href="codes.html">Codes Used</a></li>
     </ul>
 </nav>
 <main>
-    <section id="overview">
-        <h2>Dataset Overview</h2>
-        <p>Our analysis is based on a customer churn dataset with the following columns:</p>
-        <ul id="columns-list"></ul>
+    <!-- Existing sections remain unchanged -->
+
+    <section id="correlation">
+        <h2>Correlation Analysis</h2>
+        <h3>Detailed Correlation Analysis Explanation</h3>
+        <p>The correlation analysis provides insights into the relationships between various factors affecting customer churn. This analysis helps identify which variables have the strongest influence on churn behavior.</p>
+        <div class="visualization">
+            <h3>Correlation Heatmap</h3>
+            <img src="images/plot10.png" alt="Correlation Heatmap" class="plot">
+            <p class="analysis">The correlation heatmap shows relationships between variables. Stronger correlations are indicated by darker colors.</p>
+        </div>
     </section>
+
+    <section id="distribution">
+        <h2>Distribution Analysis</h2>
+        <h3>A. Churn Distribution by Subscription Type</h3>
+        <ul>
+            <li>Implementation: Pie Chart Analysis</li>
+            <li>Purpose: Shows the proportion of churned customers across different subscription categories</li>
+            <li>Methodology:
+                <ul>
+                    <li>Segments data by subscription type</li>
+                    <li>Calculates percentage of churned customers in each segment</li>
+                    <li>Visualizes proportions in circular format</li>
+                </ul>
+            </li>
+            <li>Insights:
+                <ul>
+                    <li>Identifies subscription types with higher churn risk</li>
+                    <li>Shows relative size of each customer segment</li>
+                    <li>Helps prioritize retention efforts</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="visualization">
+            <h3>Churn Distribution by Subscription Type</h3>
+            <img src="images/plot1.png" alt="Churn Distribution by Subscription Type" class="plot">
+            <p class="analysis">This pie chart illustrates the distribution of subscription types among churned customers.</p>
+        </div>
+
+        <h3>B. Age Distribution Analysis</h3>
+        <ul>
+            <li>Implementation: Histogram Analysis</li>
+            <li>Purpose: Visualizes the age spread of customers</li>
+            <li>Methodology:
+                <ul>
+                    <li>Bins age data into intervals</li>
+                    <li>Counts frequency in each bin</li>
+                    <li>Creates visual representation of age distribution</li>
+                </ul>
+            </li>
+            <li>Applications:
+                <ul>
+                    <li>Identifies key age segments</li>
+                    <li>Shows demographic concentrations</li>
+                    <li>Guides age-specific strategies</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="visualization">
+            <h3>Age Distribution</h3>
+            <img src="images/plot4.png" alt="Age Distribution" class="plot">
+            <p class="analysis">This histogram displays the age distribution of our customers.</p>
+        </div>
+    </section>
+
+    <section id="relationship">
+        <h2>Relationship Analysis</h2>
+        <h3>A. Usage Frequency vs. Total Spend</h3>
+        <ul>
+            <li>Implementation: Scatter Plot Analysis</li>
+            <li>Purpose: Examines relationship between usage and spending</li>
+            <li>Methodology:
+                <ul>
+                    <li>Plots each customer as a point</li>
+                    <li>X-axis: Usage frequency</li>
+                    <li>Y-axis: Total spend</li>
+                    <li>Color coding by churn status</li>
+                </ul>
+            </li>
+            <li>Insights:
+                <ul>
+                    <li>Shows spending patterns</li>
+                    <li>Identifies usage-spend relationships</li>
+                    <li>Reveals churn risk patterns</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="visualization">
+            <h3>Usage Frequency vs Total Spend</h3>
+            <img src="images/plot2.png" alt="Usage Frequency vs Total Spend" class="plot">
+            <p class="analysis">This scatter plot demonstrates the relationship between usage frequency and total spend, with points colored by churn status.</p>
+        </div>
+
+        <h3>B. Total Spend by Subscription Type</h3>
+        <ul>
+            <li>Implementation: Box Plot Analysis</li>
+            <li>Purpose: Shows spend distribution across subscription types</li>
+            <li>Components:
+                <ul>
+                    <li>Median spend line</li>
+                    <li>Quartile boxes</li>
+                    <li>Whiskers for range</li>
+                    <li>Outlier points</li>
+                </ul>
+            </li>
+            <li>Benefits:
+                <ul>
+                    <li>Shows spend variability</li>
+                    <li>Identifies typical ranges</li>
+                    <li>Highlights outliers</li>
+                    <li>Enables subscription comparison</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="visualization">
+            <h3>Total Spend by Subscription Type</h3>
+            <img src="images/plot3.png" alt="Total Spend by Subscription Type" class="plot">
+            <p class="analysis">This box plot shows the distribution of total spend for each subscription type.</p>
+        </div>
+    </section>
+
+    <section id="categorical">
+        <h2>Categorical Analysis</h2>
+        <h3>A. Churn Rate by Contract Length</h3>
+        <ul>
+            <li>Implementation: Bar Plot Analysis</li>
+            <li>Purpose: Shows churn variation across contract lengths</li>
+            <li>Methodology:
+                <ul>
+                    <li>Groups data by contract length</li>
+                    <li>Calculates churn rate per group</li>
+                    <li>Creates visual comparison</li>
+                </ul>
+            </li>
+            <li>Applications:
+                <ul>
+                    <li>Contract strategy development</li>
+                    <li>Risk assessment</li>
+                    <li>Retention planning</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="visualization">
+            <h3>Churn Rate by Contract Length</h3>
+            <img src="images/plot5.png" alt="Churn Rate by Contract Length" class="plot">
+            <p class="analysis">This bar plot illustrates how churn rate varies by contract length.</p>
+        </div>
+    </section>
+
+    <section id="statistical">
+        <h2>Statistical Techniques Used</h2>
+        <h3>A. Descriptive Statistics:</h3>
+        <ul>
+            <li>Mean calculations</li>
+            <li>Median analysis</li>
+            <li>Standard deviation</li>
+            <li>Quartile analysis</li>
+            <li>Frequency distributions</li>
+        </ul>
+        <h3>B. Inferential Statistics:</h3>
+        <ul>
+            <li>Correlation coefficients</li>
+            <li>Distribution analysis</li>
+            <li>Pattern recognition</li>
+            <li>Trend identification</li>
+        </ul>
+    </section>
+
+    <section id="visualization">
+        <h2>Data Visualization Techniques</h2>
+        <h3>A. Primary Visualizations:</h3>
+        <ol>
+            <li>Heatmap
+                <ul>
+                    <li>Shows correlation strength</li>
+                    <li>Uses color intensity</li>
+                    <li>Matrix format</li>
+                </ul>
+            </li>
+            <li>Pie Chart
+                <ul>
+                    <li>Shows proportions</li>
+                    <li>Circular visualization</li>
+                    <li>Percentage breakdown</li>
+                </ul>
+            </li>
+            <li>Scatter Plot
+                <ul>
+                    <li>Shows relationships</li>
+                    <li>Point distribution</li>
+                    <li>Trend identification</li>
+                </ul>
+            </li>
+            <li>Box Plot
+                <ul>
+                    <li>Shows distributions</li>
+                    <li>Identifies outliers</li>
+                    <li>Displays quartiles</li>
+                </ul>
+            </li>
+            <li>Histogram
+                <ul>
+                    <li>Shows frequency distributions</li>
+                    <li>Identifies patterns</li>
+                    <li>Reveals concentrations</li>
+                </ul>
+            </li>
+            <li>Bar Plot
+                <ul>
+                    <li>Shows comparisons</li>
+                    <li>Category analysis</li>
+                    <li>Trend visualization</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <section id="analytical">
+        <h2>Analytical Framework</h2>
+        <h3>A. Quantitative Analysis:</h3>
+        <ul>
+            <li>Numerical data processing</li>
+            <li>Statistical calculations</li>
+            <li>Metric correlations</li>
+        </ul>
+        <h3>B. Qualitative Analysis:</h3>
+        <ul>
+            <li>Pattern interpretation</li>
+            <li>Trend analysis</li>
+            <li>Insight development</li>
+        </ul>
+    </section>
+
+    <section id="outcome">
+        <h2>Outcome Metrics</h2>
+        <h3>A. Direct Metrics:</h3>
+        <ul>
+            <li>Churn rates</li>
+            <li>Customer lifetime value</li>
+            <li>Revenue impact</li>
+            <li>Retention rates</li>
+        </ul>
+        <h3>B. Indirect Metrics:</h3>
+        <ul>
+            <li>Customer satisfaction</li>
+            <li>Service usage</li>
+            <li>Engagement levels</li>
+            <li>Contract renewal rates</li>
+        </ul>
+    </section>
+
+<script src="ab.js"></script>
+
+
+    <section id="recommendations">
+        <h2>6. Strategic Recommendations</h2>
+        <h3>Contract Strategy:</h3>
+        <ul>
+            <li>Develop multi-tiered contract options with increasing benefits for longer terms.</li>
+            <li>Create early renewal incentives for existing customers.</li>
+            <li>Implement contract anniversary recognition programs.</li>
+        </ul>
+        <h3>Subscription Upgrades:</h3>
+        <ul>
+            <li>Create clear upgrade paths with demonstrated value increases.</li>
+            <li>Develop trial periods for premium features.</li>
+            <li>Implement usage-based upgrade recommendations.</li>
+        </ul>
+        <h3>Engagement Enhancement:</h3>
+        <ul>
+            <li>Implement regular usage monitoring and analysis.</li>
+            <li>Create personalized engagement programs.</li>
+            <li>Develop feature adoption campaigns.</li>
+        </ul>
+        <h3>Age-Specific Approach:</h3>
+        <ul>
+            <li>Develop age-segmented communication strategies.</li>
+            <li>Create age-appropriate feature highlights.</li>
+            <li>Design generational marketing campaigns.</li>
+        </ul>
+    </section>
+
+    <section id="implementation">
+        <h2>7. Implementation Priorities</h2>
+        <h3>Immediate Actions:</h3>
+        <ul>
+            <li>Identify high-risk customer segments.</li>
+            <li>Implement enhanced monitoring systems.</li>
+            <li>Develop targeted retention campaigns.</li>
+        </ul>
+        <h3>Medium-term Goals:</h3>
+        <ul>
+            <li>Optimize subscription tiers.</li>
+            <li>Enhance contract options.</li>
+            <li>Develop comprehensive loyalty programs.</li>
+        </ul>
+        <h3>Long-term Objectives:</h3>
+        <ul>
+            <li>Build sustainable customer relationships.</li>
+            <li>Create industry-leading retention rates.</li>
+            <li>Develop premium service positioning.</li>
+        </ul>
+    </section>
+
+    <section id="analysis">
+        <h2>8. Analysis Techniques</h2>
+        <h3>Statistical Techniques:</h3>
+        <ul>
+            <li>Descriptive Statistics: Mean calculations, median analysis, standard deviation, quartile analysis, frequency distributions.</li>
+            <li>Inferential Statistics: Correlation coefficients, distribution analysis, pattern recognition, trend identification.</li>
+        </ul>
+        <h3>Data Visualization Techniques:</h3>
+        <ul>
+            <li>Heatmap: Shows correlation strength using color intensity.</li>
+            <li>Pie Chart: Shows proportions in circular visualization.</li>
+            <li>Scatter Plot: Shows relationships and trend identification.</li>
+            <li>Box Plot: Shows distributions, identifies outliers, and displays quartiles.</li>
+            <li>Histogram: Shows frequency distributions and identifies patterns.</li>
+            <li>Bar Plot: Shows comparisons and category analysis.</li>
+        </ul>
+    </section>
+
     <section id="visualizations">
         <h2>Data Visualizations</h2>
         <div class="visualization">
@@ -58,15 +397,18 @@
             <p class="analysis">This bar plot illustrates how churn rate varies by contract length.</p>
         </div>
     </section>
-    <section id="insights">
-        <h2>Key Insights</h2>
-        <ul id="insights-list"></ul>
-    </section>
+
     <section id="conclusion">
         <h2>Conclusion</h2>
         <p>Based on our analysis, we can conclude that:</p>
-        <ul id="conclusions-list"></ul>
-        <p>To reduce churn, consider implementing targeted retention strategies for at-risk segments, encouraging upgrades to premium plans, and promoting longer contract lengths.</p>
+        <ul>
+            <li>Customer demographics, particularly age, play a significant role in churn behavior.</li>
+            <li>Higher engagement metrics, such as usage frequency and tenure, correlate with lower churn rates.</li>
+            <li>Financial indicators, including payment patterns and total spend, provide valuable insights into churn risk.</li>
+            <li>Service characteristics, like subscription type and contract length, significantly influence customer retention.</li>
+            <li>Timely and positive customer interactions are crucial for maintaining strong relationships and reducing churn.</li>
+        </ul>
+        <p>To reduce churn, we recommend implementing targeted retention strategies for at-risk segments, encouraging upgrades to premium plans, promoting longer contract lengths, and focusing on continuous engagement and value demonstration across the customer lifecycle.</p>
     </section>
 </main>
 <footer>

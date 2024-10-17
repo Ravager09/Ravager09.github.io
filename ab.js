@@ -1,46 +1,70 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const columns = [
-        'CustomerID', 'Age', 'Gender', 'Tenure', 'Usage Frequency', 'Support Calls',
-        'Payment Delay', 'Subscription Type', 'Contract Length', 'Total Spend',
-        'Last Interaction', 'Churn'
-    ];
-
-    const insights = [
-        'Usage frequency and total spend are strong indicators of customer retention',
-        'Longer contract lengths are associated with lower churn rates',
-        'Premium plan subscribers are less likely to churn',
-        'There\'s an opportunity to improve retention for basic plan and short-term contract customers',
-        'Age may play a role in churn behavior, suggesting the need for age-specific retention strategies'
-    ];
-
-    const conclusions = [
-        'High usage frequency and total spend correlate with lower churn rates',
-        'Customers with longer contracts are more likely to stay',
-        'Premium plans have the lowest churn rates among subscription types',
-        'Basic plan and short-term contract customers are at higher risk of churning',
-        'Age-specific retention strategies may be effective in reducing churn'
-    ];
-
-    function populateList(elementId, items) {
-        const list = document.getElementById(elementId);
-        items.forEach(item => {
-            const li = document.createElement('li');
-            li.textContent = item;
-            list.appendChild(li);
-        });
-    }
-
-    populateList('columns-list', columns);
-    populateList('insights-list', insights);
-    populateList('conclusions-list', conclusions);
-
-    // Add smooth scrolling for navigation
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            targetElement.scrollIntoView({ behavior: 'smooth' });
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Intersection Observer for fade-in and slide-in animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('fade-in');
+        observer.observe(section);
+    });
+
+    document.querySelectorAll('.visualization').forEach(vis => {
+        vis.classList.add('slide-in');
+        observer.observe(vis);
+    });
+
+    // Toggle dark mode
+    const darkModeToggle = document.createElement('button');
+    darkModeToggle.textContent = 'Toggle Dark Mode';
+    darkModeToggle.style.position = 'fixed';
+    darkModeToggle.style.top = '10px';
+    darkModeToggle.style.right = '10px';
+    darkModeToggle.style.zIndex = '1000';
+    document.body.appendChild(darkModeToggle);
+
+    darkModeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+            document.documentElement.style.setProperty('--background-color', '#333');
+            document.documentElement.style.setProperty('--text-color', '#F8F8FF');
+        } else {
+            document.documentElement.style.setProperty('--background-color', '#F8F8FF');
+            document.documentElement.style.setProperty('--text-color', '#333');
+        }
+    });
+
+    // Interactive charts (placeholder - replace with actual chart library implementation)
+    document.querySelectorAll('.plot').forEach(plot => {
+        plot.addEventListener('mouseover', () => {
+            plot.style.transform = 'scale(1.05)';
+            plot.style.transition = 'transform 0.3s ease';
+        });
+        plot.addEventListener('mouseout', () => {
+            plot.style.transform = 'scale(1)';
+        });
+    });
+
+    // Collapsible sections
+    document.querySelectorAll('section h2').forEach(header => {
+        header.style.cursor = 'pointer';
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            content.style.display = content.style.display === 'none' ? 'block' : 'none';
         });
     });
 });
